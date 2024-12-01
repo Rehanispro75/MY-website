@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Matches</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      padding: 30px;
+      max-width: 1300px;
+      width: 100%;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #FF7F50, #FFD700);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      opacity: 0.95;
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      padding: 25px;
+      background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for a colorful effect */
+      border-radius: 10px;
+      position: relative;
+      top: -20px; /* Raised body for a layered effect */
+      transition: top 0.3s ease;
+    }
+
+    .card:hover .card-body {
+      top: 0;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .card-title {
+      color: #000000;
+    }
+
+    .match-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .card-footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-top: 1px solid #ddd;
+      position: relative;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+
+    .card:hover .card-footer {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .button {
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* Additional Colorful Cards */
+    .card:nth-child(odd) {
+      background: linear-gradient(135deg, #32CD32, #8A2BE2);
+    }
+
+    .card:nth-child(2) {
+      background: linear-gradient(135deg, #FF6347, #FFD700);
+    }
+
+    .card:nth-child(3) {
+      background: linear-gradient(135deg, #FF1493, #FF4500);
+    }
+
+    .card:nth-child(4) {
+      background: linear-gradient(135deg, #00BFFF, #32CD32);
+    }
+
+    .card:nth-child(5) {
+      background: linear-gradient(135deg, #8A2BE2, #FF6347);
+    }
+  </style>
+</head>
+<body>
+    <h1>Recent Matches</h1>  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cOZSLF-rz_I?si=6-Ca46_KamXbRf-6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">heidendiem vs Chelsea</h2>
+        <div class="match-details">
+          <span>29 November, 2024</span>
+          
+        </div>
+        <p>Voith-Arena</p>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-eaLutjqXu0?si=TSVKeTU6_MeuEvxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">Al-NASSR vs DAMAC</h2>
+        <div class="match-details">
+          <span>29 november, 2024</span>
+          
+        </div>
+        <p>Stadium: Saudi Riyadh</p>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MZ1d7BBKc44?si=Yk34vLbq7gbqMgxp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">Barcelona  vs brest</h2>
+        <div class="match-details">
+          <span>December 28, 2024</span>
+          
+        </div>
+        <p>Stadium: spain</p>
+      </div>
+      <div class="card-footer">
+        <button class="button">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ylJGLxDQbWg?si=YW3Bn-ilPsgSYfC2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">Real Madrid vs Liverpool</h2>
+        <div class="match-details">
+          <span>November 27, 2024</span>
+          
+        </div>
+        <p>Stadium: Spain</p>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Onh4gUINc4A?si=ceitCjIn2iUP25-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">Al-NASSR vs Al-Gharafa</h2>
+        <div class="match-details">
+          <span>December 5, 2024</span>
+          
+        </div>
+        <p>Stadium: Saudi Riyadh</p>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+    <div class="card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qhd84P8Ir9k?si=-6VD8tMmWsV1bmF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h2 class="card-title">England vs Ireland</h2>
+        <div class="match-details">
+          <span>November 19, 2024</span>
+          
+        </div>
+        <p>Stadium: England</p>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
+
